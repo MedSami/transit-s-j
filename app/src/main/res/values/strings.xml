@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Transit-Autobus</string>
+    <string name="hint_identifiant">Saisir votre Identifiant SVP</string>
+    <string name="hint_password">Saisir votre mot de passe SVP</string>
+</resources>
