@@ -4,10 +4,13 @@ public class DataModel {
 
     int id;
     String nom, prenom, identifiant, email, password, numTel, type;
+    String latitude,longitude;
 
-    public DataModel(int id, String nom, String prenom, String identifiant, String email, String password, String numTel, String type) {
+    public DataModel(int id,String latitude,String longitude, String nom, String prenom, String identifiant, String email, String password, String numTel, String type) {
         this.id = id;
         this.nom = nom;
+        this.latitude=latitude;
+        this.longitude=longitude;
         this.prenom = prenom;
         this.identifiant = identifiant;
         this.email = email;
@@ -20,6 +23,21 @@ public class DataModel {
         return id;
     }
 
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
+    }
 
     public String getNom() {
         return nom;
