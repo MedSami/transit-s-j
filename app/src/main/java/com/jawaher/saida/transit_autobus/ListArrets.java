@@ -19,16 +19,20 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+
 public class ListArrets extends AppCompatActivity {
+    //private FusedLocationProviderClient fusedLocationClient;
     private RecyclerView RecycleLayout;
     private RecyclerView.LayoutManager RecycleManager;
     private RecyclerView.Adapter arretsAdapter;
     String idChauffeur;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_arrets);
         RecycleLayout = findViewById(R.id.recyclerView);
+      //  fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
 
         Bundle data = getIntent().getExtras();

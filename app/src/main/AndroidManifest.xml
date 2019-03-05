@@ -3,6 +3,7 @@
     package="com.jawaher.saida.transit_autobus">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListArrets"></activity>
+        <activity android:name=".Inscrire"></activity>
+        <activity android:name=".ListArrets" />
         <activity android:name=".ReserverPlaces" />
         <activity android:name=".GererPlaces" />
         <activity android:name=".MenuChauffeur" />

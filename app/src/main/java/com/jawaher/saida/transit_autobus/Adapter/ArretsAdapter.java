@@ -62,12 +62,14 @@ public class ArretsAdapter extends RecyclerView.Adapter<ArretsAdapter.ActorViewH
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+/*
                     Uri gmmIntentUri = Uri.parse("google.streetview:cbll="+dm.getLatitude()+","+dm.getLongitude());
                     Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                     mapIntent.setPackage("com.google.android.apps.maps");
-                    ctx.startActivity(mapIntent);
-
+                    ctx.startActivity(mapIntent);*/
+                    Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
+                            Uri.parse("http://maps.google.com/maps?saddr=35.6658971,10.0921316&daddr="+dm.getLatitude()+","+dm.getLongitude()));
+                    ctx.startActivity(intent);
 
 
                 }
