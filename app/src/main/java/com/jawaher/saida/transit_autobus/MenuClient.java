@@ -7,24 +7,18 @@ import android.view.View;
 import android.widget.Button;
 
 public class MenuClient extends AppCompatActivity {
-Button btnGererPlace,btnConsulterStation,btnConsulterBus,btnReserverPlace;
+Button btnConsulterStation,btnConsulterBus,btnReserverPlace;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_client);
 
-        btnGererPlace=findViewById(R.id.btnGererPlace);
+
         btnConsulterStation=findViewById(R.id.btnConsulterStation);
         btnConsulterBus=findViewById(R.id.btnConsulterBus);
         btnReserverPlace=findViewById(R.id.btnReserverPlace);
 
-        btnGererPlace.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(MenuClient.this,GererPlaces.class);
-                startActivity(i);
-            }
-        });
+
 
 
         btnConsulterStation.setOnClickListener(new View.OnClickListener() {
