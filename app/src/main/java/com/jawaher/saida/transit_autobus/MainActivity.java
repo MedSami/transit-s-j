@@ -97,13 +97,13 @@ public class MainActivity extends AppCompatActivity {
                                             if (index == 0) {
 
                                                 Intent intent = new Intent(MainActivity.this, MenuClient.class);
-                                                intent.putExtra("idUtilisateur", "" + response.body().getResult().get(0).getId());
+                                                intent.putExtra("idClient", "" + response.body().getResult().get(0).getId());
                                                 startActivity(intent);
                                             }
                                             if (index == 1) {
 
                                                 Intent intent = new Intent(MainActivity.this, MenuChauffeur.class);
-                                                intent.putExtra("idUtilisateur", "" + response.body().getResult().get(0).getId());
+                                                intent.putExtra("idChauffeur", "" + response.body().getResult().get(0).getId());
                                                 startActivity(intent);
                                             }
 

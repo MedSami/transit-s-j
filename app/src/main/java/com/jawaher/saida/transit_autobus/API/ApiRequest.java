@@ -20,6 +20,9 @@ public interface ApiRequest {
     /************** Select Arrets ****************/
     @GET("SelectArrets.php")
     Call<ResponseDataModel> getArrets(@Query("id") String id_chauffeur);
+/************** Select Voyages ****************/
+    @GET("SelectVoyage.php")
+    Call<ResponseDataModel> getVoyage();
 
     /*************** Inscrire  *******************/
     @FormUrlEncoded

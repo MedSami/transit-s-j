@@ -5,22 +5,56 @@ public class DataModel {
     int id;
     String nom, prenom, identifiant, email, password, numTel, type;
     String latitude,longitude;
+    String titre, description, depart_latitude, depart_longitude, arriver_latitude, arriver_longitude;
 
-    public DataModel(int id,String latitude,String longitude, String nom, String prenom, String identifiant, String email, String password, String numTel, String type) {
+    public DataModel() {
+    }
+
+    public DataModel(int id, String nom, String prenom, String identifiant, String email, String password, String numTel, String type, String latitude, String longitude, String titre, String description, String depart_latitude, String depart_longitude, String arriver_latitude, String arriver_longitude) {
         this.id = id;
         this.nom = nom;
-        this.latitude=latitude;
-        this.longitude=longitude;
         this.prenom = prenom;
         this.identifiant = identifiant;
         this.email = email;
         this.password = password;
         this.numTel = numTel;
         this.type = type;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.titre = titre;
+        this.description = description;
+        this.depart_latitude = depart_latitude;
+        this.depart_longitude = depart_longitude;
+        this.arriver_latitude = arriver_latitude;
+        this.arriver_longitude = arriver_longitude;
     }
 
     public int getId() {
         return id;
+    }
+
+    public String getTitre() {
+        return titre;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getDepart_latitude() {
+        return depart_latitude;
+    }
+
+    public String getDepart_longitude() {
+        return depart_longitude;
+    }
+
+    public String getArriver_latitude() {
+        return arriver_latitude;
+    }
+
+    public String getArriver_longitude() {
+        return arriver_longitude;
     }
 
     public String getLatitude() {

@@ -5,26 +5,34 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MenuClient extends AppCompatActivity {
-Button btnConsulterStation,btnConsulterBus,btnReserverPlace;
+Button btnConsulterVoyages,btnConsulterBus,btnReserverPlace;
+String idClient;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_client);
 
 
-        btnConsulterStation=findViewById(R.id.btnConsulterStation);
+        btnConsulterVoyages =findViewById(R.id.btnConsulterVoyages);
         btnConsulterBus=findViewById(R.id.btnConsulterBus);
         btnReserverPlace=findViewById(R.id.btnReserverPlace);
 
+        Bundle data = getIntent().getExtras();
+        if (data != null) {
+            idClient = data.getString("idClient");
+        }
 
 
-
-        btnConsulterStation.setOnClickListener(new View.OnClickListener() {
+        btnConsulterVoyages.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent i=new Intent(MenuClient.this,ListVoyages.class);
+                i.putExtra("btnClicked","voyage");
+                i.putExtra("idClient",idClient);
+                startActivity(i);
             }
         });
 
@@ -38,7 +46,9 @@ Button btnConsulterStation,btnConsulterBus,btnReserverPlace;
         btnReserverPlace.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(MenuClient.this,ReserverPlaces.class);
+                Intent i=new Intent(MenuClient.this,ListVoyages.class);
+                i.putExtra("btnClicked","reserver");
+                i.putExtra("idClient",idClient);
                 startActivity(i);
             }
         });
