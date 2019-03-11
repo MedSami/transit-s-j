@@ -35,5 +35,15 @@ public interface ApiRequest {
             @Field("password") String password,
             @Field("numTel") String numTel
     );
+    /*************** Inscrire  *******************/
+    @FormUrlEncoded
+    @POST("Reservation.php")
+    Call<ResponseDataModel> Reservation(
+            @Field("idClient") String idClient,
+            @Field("idVoyage") String idVoyage);
+
+    /************** Select Reservation ****************/
+    @GET("SelectReservation.php")
+    Call<ResponseDataModel> getReservation(@Query("idClient") String idClient);
 
 }

@@ -25,7 +25,6 @@ String idClient;
             idClient = data.getString("idClient");
         }
 
-
         btnConsulterVoyages.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,12 +35,7 @@ String idClient;
             }
         });
 
-        btnConsulterBus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-            }
-        });
 
         btnReserverPlace.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,5 +47,11 @@ String idClient;
             }
         });
 
+        btnConsulterBus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 }

@@ -2,15 +2,15 @@ package com.jawaher.saida.transit_autobus.Model;
 
 public class DataModel {
 
-    int id;
+
     String nom, prenom, identifiant, email, password, numTel, type;
-    String latitude,longitude;
+    String id,latitude,longitude;
     String titre, description, depart_latitude, depart_longitude, arriver_latitude, arriver_longitude;
 
     public DataModel() {
     }
 
-    public DataModel(int id, String nom, String prenom, String identifiant, String email, String password, String numTel, String type, String latitude, String longitude, String titre, String description, String depart_latitude, String depart_longitude, String arriver_latitude, String arriver_longitude) {
+    public DataModel(String id, String nom, String prenom, String identifiant, String email, String password, String numTel, String type, String latitude, String longitude, String titre, String description, String depart_latitude, String depart_longitude, String arriver_latitude, String arriver_longitude) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
@@ -29,7 +29,7 @@ public class DataModel {
         this.arriver_longitude = arriver_longitude;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 

@@ -23,7 +23,7 @@ public class ListVoyages extends AppCompatActivity {
     private RecyclerView RecycleLayout;
     private RecyclerView.LayoutManager RecycleManager;
     private RecyclerView.Adapter voyageAdapter;
-String idClient,btnClicked;
+    String idClient,btnClicked;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,12 +34,11 @@ String idClient,btnClicked;
         if (data != null) {
             idClient = data.getString("idClient");
             btnClicked = data.getString("btnClicked");
-
         }
 
         ApiRequest api = RetrofitServer.getClient().create(ApiRequest.class);
         Call<ResponseDataModel> getVoyage=api.getVoyage();
-getVoyage.enqueue(new Callback<ResponseDataModel>() {
+    getVoyage.enqueue(new Callback<ResponseDataModel>() {
     @Override
     public void onResponse(Call<ResponseDataModel> call, Response<ResponseDataModel> response) {
         String code = response.body().getCode();
