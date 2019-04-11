@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListReservation"></activity>
+        <activity android:name=".BusDescription"></activity>
+        <activity android:name=".ListVoyageBus" />
+        <activity android:name=".ListReservation" />
         <activity android:name=".VoyageDescription" />
         <activity android:name=".ListVoyages" />
         <activity android:name=".Inscrire" />

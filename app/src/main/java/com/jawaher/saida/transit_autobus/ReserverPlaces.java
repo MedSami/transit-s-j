@@ -17,21 +17,21 @@ import retrofit2.Response;
 
 public class ReserverPlaces extends AppCompatActivity {
 String idClient,idVoyage;
-Button btnAjouter,btnConsulter,btnReserver;
+Button btnReserver,btnConsulter, btnSupprimer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reserver_places);
-        btnAjouter=findViewById(R.id.btnAjouter);
+        btnReserver =findViewById(R.id.btnReserver);
         btnConsulter=findViewById(R.id.btnConsulter);
-        btnReserver=findViewById(R.id.btnSupprimer);
+        btnSupprimer =findViewById(R.id.btnSupprimer);
 
         Bundle data = getIntent().getExtras();
         if (data != null) {
             idClient = data.getString("id_client");
             idVoyage = data.getString("id_voyage");
         }
-btnAjouter.setOnClickListener(new View.OnClickListener() {
+btnReserver.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
 
@@ -57,6 +57,16 @@ btnConsulter.setOnClickListener(new View.OnClickListener() {
     public void onClick(View view) {
         Intent i=new Intent(ReserverPlaces.this,ListReservation.class);
         i.putExtra("idClient",idClient);
+        i.putExtra("btnClicked","consulter");
+        startActivity(i);
+    }
+});
+btnSupprimer.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Intent i=new Intent(ReserverPlaces.this,ListReservation.class);
+        i.putExtra("idClient",idClient);
+        i.putExtra("btnClicked","supprimer");
         startActivity(i);
     }
 });

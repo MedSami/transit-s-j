@@ -50,7 +50,8 @@ String idClient;
         btnConsulterBus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent i=new Intent(MenuClient.this,ListVoyageBus.class);
+                startActivity(i);
             }
         });
     }

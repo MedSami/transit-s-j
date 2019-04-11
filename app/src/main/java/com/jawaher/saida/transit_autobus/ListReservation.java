@@ -23,7 +23,7 @@ public class ListReservation extends AppCompatActivity {
     private RecyclerView RecycleLayout;
     private RecyclerView.LayoutManager RecycleManager;
     private RecyclerView.Adapter reservationAdapter;
-String idClient;
+String idClient,btnClicked;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +33,7 @@ String idClient;
         Bundle data = getIntent().getExtras();
         if (data != null) {
             idClient = data.getString("idClient");
+            btnClicked = data.getString("btnClicked");
         }
         ApiRequest api = RetrofitServer.getClient().create(ApiRequest.class);
         Call<ResponseDataModel> getReservation=api.getReservation(idClient);
@@ -47,7 +48,7 @@ String idClient;
 
                     RecycleLayout.setLayoutManager(RecycleManager);
 
-                    reservationAdapter = new ReservationAdapter(item, ListReservation.this,idClient);
+                    reservationAdapter = new ReservationAdapter(item, ListReservation.this,idClient,btnClicked);
 
                     RecycleLayout.setAdapter(reservationAdapter);
                 }

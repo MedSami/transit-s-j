@@ -24,6 +24,12 @@ public interface ApiRequest {
     @GET("SelectVoyage.php")
     Call<ResponseDataModel> getVoyage();
 
+    /************** Select Voyages & Bus****************/
+    @GET("SelectBus.php")
+    Call<ResponseDataModel> getVoyageBus();
+    /******************** Supprimer Reservation*******************/
+    @GET("SupprimerReservation.php")
+    Call<ResponseDataModel> SuppReservation(@Query("idVoyage") String idVoyage);
     /*************** Inscrire  *******************/
     @FormUrlEncoded
     @POST("Inscrire.php")

@@ -4,16 +4,17 @@ public class DataModel {
 
 
     String nom, prenom, identifiant, email, password, numTel, type;
-    String id,latitude,longitude;
+    String id,latitude,longitude,matricule;
     String titre, description, depart_latitude, depart_longitude, arriver_latitude, arriver_longitude;
 
     public DataModel() {
     }
 
-    public DataModel(String id, String nom, String prenom, String identifiant, String email, String password, String numTel, String type, String latitude, String longitude, String titre, String description, String depart_latitude, String depart_longitude, String arriver_latitude, String arriver_longitude) {
+    public DataModel(String id, String nom,String matricule, String prenom, String identifiant, String email, String password, String numTel, String type, String latitude, String longitude, String titre, String description, String depart_latitude, String depart_longitude, String arriver_latitude, String arriver_longitude) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
+        this.matricule=matricule;
         this.identifiant = identifiant;
         this.email = email;
         this.password = password;
@@ -39,6 +40,10 @@ public class DataModel {
 
     public String getDescription() {
         return description;
+    }
+
+    public String getMatricule() {
+        return matricule;
     }
 
     public String getDepart_latitude() {
