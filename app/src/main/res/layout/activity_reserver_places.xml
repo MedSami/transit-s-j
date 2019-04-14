@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReserverPlaces">
+    tools:context=".ReserverPlaces"
+    android:background="@drawable/gradient_background">
 
     <Button
         android:id="@+id/btnReserver"
@@ -16,6 +17,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="Reserver une place"
+        android:background="@drawable/gradient_button"
         android:drawableLeft="@drawable/ic_place_black_24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -31,6 +33,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:background="@drawable/gradient_button"
         android:drawableLeft="@drawable/ic_check_black_24dp"
         android:text="Consulter Reservation"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,6 +50,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:background="@drawable/gradient_button"
         android:text="Supprimer Reservation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

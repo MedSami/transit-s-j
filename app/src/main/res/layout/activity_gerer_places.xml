@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GererPlaces">
+    tools:context=".GererPlaces"
+    android:background="@drawable/gradient_background">
 
     <Button
         android:id="@+id/btnReserver"
@@ -16,6 +17,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="Ajouter Place"
+        android:drawableLeft="@drawable/ic_check_black_24dp"
+        android:background="@drawable/gradient_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +33,9 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:background="@drawable/gradient_button"
         android:text="Consulter Place"
+        android:drawableLeft="@drawable/ic_check_black_24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnReserver" />
@@ -45,6 +50,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="Supprimer Place"
+        android:drawableLeft="@drawable/ic_delete_black_24dp"
+        android:background="@drawable/gradient_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnConsulter" />

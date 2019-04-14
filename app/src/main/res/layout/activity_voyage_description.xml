@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VoyageDescription">
+    tools:context=".VoyageDescription"
+    android:background="@drawable/gradient_background">
 
     <TextView
         android:id="@+id/txtTitre"
@@ -16,6 +17,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="Titre"
+        android:textColor="@color/Red"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

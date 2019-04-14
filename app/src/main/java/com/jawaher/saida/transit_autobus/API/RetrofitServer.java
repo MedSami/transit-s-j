@@ -7,8 +7,8 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitServer {
-    private static final String Base_Url="http://10.0.3.2/Transit/";
-    //private static final String Base_Url="https://transit-autobus.000webhostapp.com/Transit/";
+    //private static final String Base_Url="http://10.0.3.2/Transit/";
+    private static final String Base_Url="https://transit-autobus.000webhostapp.com/Transit/";
     private static Retrofit retrofit;
 
 

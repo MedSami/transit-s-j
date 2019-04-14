@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuClient">
+    tools:context=".MenuClient"
+    android:background="@drawable/gradient_background">
 
     <Button
         android:id="@+id/btnConsulterVoyages"
@@ -14,6 +15,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="216dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/gradient_button"
         android:layout_marginRight="8dp"
         android:drawableLeft="@drawable/ic_transfer_within_a_station_black_24dp"
         android:text="Consulter Voyages"
@@ -27,6 +29,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:background="@drawable/gradient_button"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
@@ -44,6 +47,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="32dp"
+        android:background="@drawable/gradient_button"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:drawableLeft="@drawable/ic_place_black_24dp"
